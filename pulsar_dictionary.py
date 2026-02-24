@@ -2,10 +2,55 @@
 
 # The following values are taken from the ATNF Pulsar Catalogue
 # https://www.atnf.csiro.au/research/pulsar/psrcat/
+# Includes RA & Dec (at the recommendation to use ATNF, not SIMBAD coordinates)
+# "Using the ATNF position produces a pulse in the barycentered phased lightcurve,
+#  but the pulse is not visible using the incorrect Simbad source position." - Michael Corcoran
 
 # Note that "B1821-24", "XTE_J1751-305" are not available names in ATNF
-# Includes right_ascension & declination (at the recommendation to use ATNF, not SIMBAD coordinates)
-# Frequency Epoch is expected in NICERTIME, not MJD. Old entries may have MJD and a # DANGER
+# The correct names are "B1821-24A"
+
+# Frequency Epoch is expected in NICERTIME, not MJD.
+# Old entries may have MJD and a # DANGER
+
+
+pulsar_dict = {
+    "B1937+21": {
+        "ra": 294.91067,
+        "dec": 21.583089,
+        "frequency": 641.92822124440,
+        "f_dot": -4.33083e-14,
+        "frequency_epoch": 163646615.238,
+    },  # from Sun & co., 2025 #FEPOCH MJD58552, 2019 MAR 10
+    "B1821-24A": {
+        "ra": 276.13336627,
+        "dec": -24.8696885,
+        "frequency": 327.40554427918,
+        "f_dot": -1.73511e-13,
+        "frequency_epoch": 109036802.000,
+    },  # from Zheng & co., 2024
+    "J0218+4232": {
+        "ra": 34.5264940375,
+        "dec": 42.53815976,
+        "frequency": 430.46105454576322757,
+        "f_dot": -1.4341012786411414844e-14,
+        "frequency_epoch": -143251200.000,
+    },  # https://gitlab.com/IPTA/DR2/-/blob/master/pulsars/J0218%2B4232/ipta.par?ref_type=heads
+    "J0030+0451": {
+        "ra": 7.61428128,
+        "dec": 4.8610310,
+        "frequency": 205.53069901678,
+        "f_dot": -4.292e-16,
+        "frequency_epoch": 109036802.000,
+    },
+    "J0437-4715": {
+        "ra": 69.31589451,
+        "dec": -47.25239511,
+        "frequency": 173.68794618476016695,
+        "f_dot": -1.728362239e-15,
+        "frequency_epoch": -402019200.000,
+    },  # propagated forward using update_fepoch.ipynb, see references in that notebook
+}
+
 
 pulsar_coords = {
     "B0531+21": {
@@ -36,9 +81,16 @@ pulsar_coords = {
         "f_dot": -4.331046e-14,
         "frequency_epoch": -327456000.000,
     },
+    "B1821-24": {
+        "ra": 276.1333,
+        "dec": -24.86995,
+        "frequency": 327.40554427924,
+        "f_dot": -1.73511e-13,
+        "frequency_epoch": 109036802.000,
+    },
     "J0218+4232": {
-        "ra": 34.526494038,
-        "dec": 42.53815976,
+        "ra": 34.52649,
+        "dec": 42.53816,
         "frequency": 430.461054546,
         "f_dot": -1.4e-14,
         "frequency_epoch": 55000,  # DANGER
@@ -53,10 +105,10 @@ pulsar_coords = {
     "J0437-4715": {
         "ra": 69.316872576,
         "dec": -47.252783951,
-        "frequency": 173.6879456649439,
-        "f_dot": -1.728367e-15,
-        "frequency_epoch": 55486,  # DANGER
-    },
+        "frequency": 173.6879456649435,
+        "f_dot": -1.7283626e-15,
+        "frequency_epoch": -101174400.000,
+    },  # ATNF, FEPOCH 55486, 2010 OCT 17
     "J1012+5307": {
         "ra": 153.13932687,
         "dec": 53.11729541,
