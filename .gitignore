@@ -1,2 +1,17 @@
 __pycache__/pulsar_dictionary.cpython-312.pyc
 __pycache__/pulsar_dictionary.cpython-312.pyc
+__pycache__/nicer_data_prep.cpython-310.pyc
+__pycache__/nicer_data_prep.cpython-312.pyc
+__pycache__/nicer_helper.cpython-310.pyc
+__pycache__/pulsar_dictionary.cpython-310.pyc
+__pycache__/pulsar_dictionary.cpython-312.pyc
+__pycache__/pulsar_dictionary.cpython-312.pyc
+crab2.txt
+obsid_lists/obsids_J0218+4232.txt
+obsid_lists/obsids_J0437-4715.txt
+xamin_b1821-24_exp10000.csv
+xamin_J0030+0451_exp10000.csv
+xamin_J0218+4232_exp10000_2.csv
+xamin_J0437-4715_exp10000.csv
+xamin_J0437-4715_exp5000.csv
+update_fepoch.ipynb
